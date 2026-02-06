@@ -22,14 +22,6 @@ function App() {
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
-        <button
-          className="error-button"
-          onClick={() => {
-            throw new Error('Test Sentry error!')
-          }}
-        >
-          Throw Error
-        </button>
       </div>
     </>
   )
