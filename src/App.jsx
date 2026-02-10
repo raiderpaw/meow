@@ -33,7 +33,7 @@ function App() {
         <button
           className="error-button"
           onClick={() => {
-            throw new Error("This should be a different one");
+            Sentry.captureException(new Error("Capture Exception"));
           }}
         >
           Throw Error
