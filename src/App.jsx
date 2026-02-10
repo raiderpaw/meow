@@ -36,7 +36,7 @@ function App() {
             Sentry.captureException(new Error("Capture Exception"));
           }}
         >
-          Throw Error
+          Throw new Error
         </button>
       </div>
     </>
