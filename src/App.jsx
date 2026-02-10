@@ -1,11 +1,11 @@
-import { useState } from 'react'
-import * as Sentry from '@sentry/react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import * as Sentry from "@sentry/react";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "/vite.svg";
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
     <>
@@ -25,14 +25,22 @@ function App() {
         <button
           className="error-button"
           onClick={() => {
-            throw new Error('Test Sentry error!')
+            throw new Error("Test Sentry error again");
+          }}
+        >
+          Throw Error
+        </button>
+        <button
+          className="error-button"
+          onClick={() => {
+            throw new Error("This should be a different one");
           }}
         >
           Throw Error
         </button>
       </div>
     </>
-  )
+  );
 }
 
-export default Sentry.withProfiler(App)
+export default Sentry.withProfiler(App);
